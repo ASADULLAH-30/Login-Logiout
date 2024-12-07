@@ -1,0 +1,134 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Changed to Poppins font */
+  background: url('../boats-45a.png') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #f2f2f2;
+  background-attachment: fixed;
+}
+
+/* Container Styles */
+.container {
+  background: rgba(0, 0, 0, 0.7); /* Darkened the background for better contrast */
+  backdrop-filter: blur(15px); /* Increased blur for a modern look */
+  border-radius: 20px;
+  padding: 2.5rem;
+  width: 85%;
+  max-width: 450px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Deeper shadow for more depth */
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2); /* Slightly lighter background */
+  color: #fff;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #00d2ff; /* Blue focus border */
+  background: rgba(255, 255, 255, 0.4);
+  outline: none;
+}
+
+/* Button Styles */
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #ff6a6a, #ff1744); /* Added a red gradient */
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #ff1744, #ff6a6a); /* Reversed the gradient on hover */
+}
+
+/* Logout Button */
+.logout-btn {
+  margin-top: 20px;
+  background: linear-gradient(45deg, #00d2ff, #3a47d5);
+}
+
+.logout-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #3a47d5, #00d2ff); /* Hover effect on logout button */
+}
+
+/* Link Styles */
+a {
+  display: block;
+  margin-top: 12px;
+  color: #00d2ff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #ff6a6a; /* Change color to red on hover */
+}
+
+/* Footer Styles */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 12px 0;
+  font-size: 1rem;
+  z-index: 1000;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.4); /* Shadow for footer */
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Animation for container */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 500px) {
+  .container {
+      padding: 1.5rem;
+      margin: 0 10px;
+  }
+
+  input {
+      font-size: 0.95rem; /* Adjusted input size on smaller screens */
+  }
+
+  button {
+      font-size: 1rem;
+  }
+}
